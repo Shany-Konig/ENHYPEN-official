@@ -1,9 +1,341 @@
 body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
+
+
+
 
 .enhypengroup {
     width: 100%;
-    height: 630px;
+    height: auto;
+
+}
+
+
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    height: 60px;
+    top: 0;
+    margin: auto;
+    z-index: 1000;
+
+}
+
+nav a {
+    color: rgb(235, 234, 234);
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 15px;
+    background-color: #202020;
+    padding: 18px 18px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 7px;
+    z-index: 999;
+
+}
+
+.enhypenlogo {
+    width: 150px;
+    height: auto;
+    position: relative;
+    float: left;
+    bottom: 40px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+section,
+#about {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #232323;
+    height: 400px;
+
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #dbdbdb;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    margin-left: 150px;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #d5d5d5;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+
+}
+
+section,
+#members {
+    background-color: #232323;
+    padding: 50px 20px;
+    text-align: left;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    height: 900px;
+    margin-top: 0px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d5d5d5;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    margin-left: 150px;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.member-photo {
+    width: 250px;
+    height: 350px;
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-left: 60px;
+    margin-top: 30px;
+    border-color: greenyellow;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.member-photo:hover {
+    transform: scale(1.05);
+}
+
+
+section,
+#shop {
+    background-color: #232323;
+    padding: 50px 20px;
+    text-align: left;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    height: 600px;
+}
+
+.shop-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.shop-marquee {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+    /* ✅ Ensures it stretches to fit all children */
+}
+
+.shop-marquee img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move half way across the duplicate set */
+    }
+}
+
+
+
+button {
+    background-color: #acacac;
+    color: #232323;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    background-color: #cecbcb;
+    color: rgb(140, 209, 37);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section,
+#music {
+    background-color: #232323;
+    padding: 50px 20px;
+    text-align: left;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+    height: 900px;
+}
+
+.music-container {
+    background-color: rgb(128, 116, 188);
+    width: auto;
+    height: 300px;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.album-cover {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    justify-items: center;
+    position: absolute;
+    right: 45%;
+
+}
+
+.vinyl-record {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    justify-items: center;
+    float: left;
+    position: relative;
+    animation: rotate 10s linear infinite;
+    right: 30%;
+
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.player {
+    float: right;
+    position: relative;
+    left: 120px;
+    top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #243146;
+    color: #d5d5d5;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    height: 200px;
+}
+
+.enhypenlogo-footer {
+    width: 130px;
+    height: auto;
+
+}
+
+footer p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+
 }
